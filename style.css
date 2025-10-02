@@ -6,6 +6,8 @@ body {
   color: #222;
   padding: 24px;
   background-image: url('./BVxst1.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 /* Container */
@@ -86,12 +88,12 @@ button:hover{
   align-items: center;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #f0f2f5;
+  border: 1px solid #000000;
   margin-bottom: 8px;
   background: #fff;
 }
-.task-left { display:flex; align-items:center; gap:10px; }
-.task-text { font-size: 1rem; }
+.task-left { display:flex; align-items:center; gap:10px;}
+.task-text { font-size: 1rem;}
 
 /* Completed tasks */
 .task-item.completed .task-text { 
@@ -101,7 +103,7 @@ button:hover{
 
 
 /* Buttons inside each task */
-.task-right { display:flex; gap:8px; }
+.task-right { display:flex; gap:8px;}
 .task-right button {
   border: none; background: none; cursor: pointer; padding:6px; border-radius:6px;
 }
@@ -119,10 +121,16 @@ button:hover{
     background-color: #3a62d9;
     color:white;
 }
+
 /* Small screen adjustments */
-@media (max-width: 600px) {
+@media screen and (min-width:300px) and ( max-width: 600px) {
   #input { flex-direction: column; align-items: stretch; }
   .controls { flex-direction: column; align-items: stretch; gap: 8px; }
   #heading h1 { font-size: 1.6rem; }
   .button { width: 100%; justify-content: center; }
+  body{
+    background-repeat: no-repeat;
+    background-size:900px 1500px;
+    /* background-size: cover; */
+  }
 }

@@ -21,7 +21,7 @@ function createTaskElement(task) {
   const li = document.createElement('li');
   li.className = 'task-item' + (task.completed ? ' completed' : '');
   li.dataset.id = task.id;
-
+  
   li.innerHTML = `
     <label class="task-left">
       <input type="checkbox" class="task-checkbox" ${task.completed ? 'checked' : ''} />
