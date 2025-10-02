@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo-list</title>
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <section>
+    <div id="heading">
+      <h1>To-do List</h1>
+    </div>
+
+    <main>
+      <form id="task-form" onsubmit="return false;">
+        <div id="input">
+          <label for="task-input" id="emoji"><i class="fa-solid fa-list-check fa-2xl"></i></label>
+          <input id="task-input" type="text" placeholder="Write your task..." aria-label="Task input" />
+          <button type="button" id="add-btn" class="button">
+            <span class="button__text">Add Task</span>
+            <span class="button__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="controls">
+          <div class="filters">
+            <button type="button" class="filter active" data-filter="all">All</button>
+            <button type="button" class="filter" data-filter="pending">Pending</button>
+            <button type="button" class="filter" data-filter="completed">Completed</button>
+          </div>
+          <div class="actions">
+            <button type="button" id="clear-completed">Clear Completed</button>
+          </div>
+        </div>
+
+        <ul id="task-list">
+          <!-- tasks appear here -->
+        </ul>
+      </form>
+    </main>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+</html>
